@@ -4820,6 +4820,21 @@
                         el: ".swiper-media-pagination",
                         clickable: true
                     },
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 0,
+                            autoHeight: true
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    },
                     on: {}
                 });
                 new core(".swiper-video", {
@@ -4835,11 +4850,32 @@
                         el: ".swiper-video-pagination",
                         clickable: true
                     },
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1,
+                            direction: "horizontal"
+                        },
+                        1024: {
+                            slidesPerView: 1,
+                            direction: "vertical"
+                        }
+                    },
                     thumbs: {
                         swiper: {
                             el: ".image-mini-slider",
-                            slidesPerView: 3,
-                            direction: "vertical"
+                            breakpoints: {
+                                320: {
+                                    el: ".image-mini-slider",
+                                    slidesPerView: 2,
+                                    direction: "horizontal",
+                                    spaceBetween: 20
+                                },
+                                1024: {
+                                    el: ".image-mini-slider",
+                                    slidesPerView: 3,
+                                    direction: "vertical"
+                                }
+                            }
                         }
                     },
                     navigation: {
