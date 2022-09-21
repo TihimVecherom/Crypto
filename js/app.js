@@ -1098,7 +1098,19 @@
         }
         modules_flsModules.select = new SelectConstructor({});
         var datepicker_min = __webpack_require__(448);
-        const picker = datepicker_min("[data-datepicker]", {
+        const picker = datepicker_min(".black-data", {
+            customDays: [ "SAN", "MON ", "TUE", "WED", "THU", "FRI", "SAT" ],
+            customMonths: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ],
+            overlayButton: "Применить",
+            overlayPlaceholder: "Год (4 цифры)",
+            startDay: 1,
+            formatter: (input, date, instance) => {
+                const value = date.toLocaleDateString();
+                input.value = value;
+            },
+            onSelect: function(input, instance, date) {}
+        });
+        datepicker_min(".black-data-two", {
             customDays: [ "SAN", "MON ", "TUE", "WED", "THU", "FRI", "SAT" ],
             customMonths: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ],
             overlayButton: "Применить",
@@ -4893,6 +4905,16 @@
                     autoHeight: true,
                     speed: 800,
                     direction: "vertical",
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1,
+                            direction: "horizontal"
+                        },
+                        768: {
+                            slidesPerView: 3,
+                            direction: "vertical"
+                        }
+                    },
                     scrollbar: {
                         el: ".swiper-scrollbar",
                         draggable: true
