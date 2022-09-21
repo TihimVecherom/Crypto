@@ -4885,7 +4885,8 @@
                                 1024: {
                                     el: ".image-mini-slider",
                                     slidesPerView: 3,
-                                    direction: "vertical"
+                                    direction: "vertical",
+                                    spaceBetween: 9
                                 }
                             }
                         }

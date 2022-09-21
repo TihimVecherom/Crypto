@@ -505,14 +505,18 @@
 						<div class="video__tabs-swiper">
 
 							<div data-tabs class="tabs-video">
-								<nav data-tabs-titles class="tabs-video__navigation">
+								<div class="tabs-video__mobile-navigation">
 
-									<button id="on" type="submit" class="tabs-video__title "><span>Категория 3</span></button>
-									<button type="submit" class="tabs-video__title"><span>Категория 2</span></button>
-									<button type="submit" class="tabs-video__title _tab-active"><span>Категория
-											1</span></button>
+									<div class="mobile-arrow arrow-next"></div>
+									<nav data-tabs-titles class="tabs-video__navigation">
+										<button id="on" type="submit" class="tabs-video__title "><span>Категория 3</span></button>
+										<button type="submit" class="tabs-video__title"><span>Категория 2</span></button>
+										<button type="submit" class="tabs-video__title  _tab-active"><span>Категория
+												1</span></button>
 
-								</nav>
+									</nav>
+									<div class="mobile-arrow arrow-prev"></div>
+								</div>
 								<div data-tabs-body class="tabs-video__content">
 									<div class="tabs-video__body">
 
@@ -987,7 +991,8 @@
 								Emirates Tower
 							</div>
 							<div class="footer__social-location">
-								Российская Федерация, Москва, ул. Пресненская набережная, дом 12. ММДЦ Москва-Сити, Башня Федерация
+								Российская Федерация, Москва, ул. Пресненская набережная, дом 12. ММДЦ Москва-Сити, Башня
+								Федерация
 
 							</div>
 
@@ -1003,7 +1008,8 @@
 				</div>
 				<div class="footer__down">
 
-					<div class="footer__down-text">ICO BROTHERS is a consulting company that has been working on the cryptocurrency
+					<div class="footer__down-text">ICO BROTHERS is a consulting company that has been working on the
+						cryptocurrency
 						market since 2017. Our clients are more than 350 projects of various directions.</div>
 					<div class="footer__down-links">
 						<a class="footer__down-link" href="#">Истоия использования </a>
@@ -1016,6 +1022,38 @@
 	</div>
 
 	<script src="js/app.min.js?_v=20220921152149"></script>
+
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js?_v=20220921173219" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			function checkLastBtn() {
+				if (jQuery('.video__tabs-swiper .tabs-video__navigation .tabs-video__title:last-child()').hasClass('_tab-active')) {
+					jQuery('.mobile-arrow.arrow-next').addClass('disabled');
+				} else {
+					jQuery('.mobile-arrow.arrow-next').removeClass('disabled');
+				}
+				if (jQuery('.video__tabs-swiper .tabs-video__navigation .tabs-video__title:first-child()').hasClass('_tab-active')) {
+					jQuery('.mobile-arrow.arrow-prev').addClass('disabled');
+				} else {
+					jQuery('.mobile-arrow.arrow-prev').removeClass('disabled');
+				}
+			};
+
+			jQuery('.mobile-arrow.arrow-prev').on('click', function() {
+				var current_tab = jQuery('.video__tabs-swiper .tabs-video__navigation .tabs-video__title._tab-active').index();
+				var all_tabs = jQuery('.video__tabs-swiper .tabs-video__navigation .tabs-video__title').length;
+				jQuery('.video__tabs-swiper .tabs-video__navigation .tabs-video__title:nth-child( ' + current_tab + ' )').click();
+				checkLastBtn();
+			});
+			jQuery('.mobile-arrow.arrow-next').on('click', function() {
+				var current_tab = jQuery('.video__tabs-swiper .tabs-video__navigation .tabs-video__title._tab-active').index();
+				current_tab = ++current_tab;
+				jQuery('.video__tabs-swiper .tabs-video__navigation .tabs-video__title:nth-child( ' + ++current_tab + ' )').click();
+				checkLastBtn();
+			});
+		});
+	</script>
 </body>
+
 
 </html>
