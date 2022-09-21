@@ -570,6 +570,12 @@ h6 {
   min-width: max-content;
 }
 
+.button span {
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
 .button-scroll {
   position: relative;
   width: 22px;
@@ -1443,9 +1449,7 @@ h6 {
 
 .swiper-video {
   width: 780px;
-  min-height: -webkit-max-content;
-  min-height: -moz-max-content;
-  min-height: max-content;
+  height: 439px !important;
 }
 
 .swiper-video-wrapper {
@@ -1488,6 +1492,9 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   gap: 20px;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
 
 .text-slide__text {
@@ -1533,7 +1540,7 @@ h6 {
   max-height: max-content;
   position: relative;
   padding-top: 64px;
-  padding-bottom: 54px;
+  padding-bottom: 64px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4092,6 +4099,9 @@ button.swiper-pagination-bullet {
 
   .swiper-video {
     width: 100% !important;
+    height: -webkit-min-content !important;
+    height: -moz-min-content !important;
+    height: min-content !important;
   }
 
   .mini-slider-room {
