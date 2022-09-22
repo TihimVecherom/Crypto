@@ -1098,31 +1098,33 @@
         }
         modules_flsModules.select = new SelectConstructor({});
         var datepicker_min = __webpack_require__(448);
-        const picker = datepicker_min(".black-data", {
-            customDays: [ "SAN", "MON ", "TUE", "WED", "THU", "FRI", "SAT" ],
-            customMonths: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ],
-            overlayButton: "Применить",
-            overlayPlaceholder: "Год (4 цифры)",
-            startDay: 1,
-            formatter: (input, date, instance) => {
-                const value = date.toLocaleDateString();
-                input.value = value;
-            },
-            onSelect: function(input, instance, date) {}
-        });
-        datepicker_min(".black-data-two", {
-            customDays: [ "SAN", "MON ", "TUE", "WED", "THU", "FRI", "SAT" ],
-            customMonths: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ],
-            overlayButton: "Применить",
-            overlayPlaceholder: "Год (4 цифры)",
-            startDay: 1,
-            formatter: (input, date, instance) => {
-                const value = date.toLocaleDateString();
-                input.value = value;
-            },
-            onSelect: function(input, instance, date) {}
-        });
-        modules_flsModules.datepicker = picker;
+        if ($(".black-data").length > 0 && $(".black-data-two").length > 0) {
+            const picker = datepicker_min(".black-data", {
+                customDays: [ "SAN", "MON ", "TUE", "WED", "THU", "FRI", "SAT" ],
+                customMonths: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ],
+                overlayButton: "Применить",
+                overlayPlaceholder: "Год (4 цифры)",
+                startDay: 1,
+                formatter: (input, date, instance) => {
+                    const value = date.toLocaleDateString();
+                    input.value = value;
+                },
+                onSelect: function(input, instance, date) {}
+            });
+            datepicker_min(".black-data-two", {
+                customDays: [ "SAN", "MON ", "TUE", "WED", "THU", "FRI", "SAT" ],
+                customMonths: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ],
+                overlayButton: "Применить",
+                overlayPlaceholder: "Год (4 цифры)",
+                startDay: 1,
+                formatter: (input, date, instance) => {
+                    const value = date.toLocaleDateString();
+                    input.value = value;
+                },
+                onSelect: function(input, instance, date) {}
+            });
+            modules_flsModules.datepicker = picker;
+        }
         function isObject(obj) {
             return null !== obj && "object" === typeof obj && "constructor" in obj && obj.constructor === Object;
         }
@@ -4922,6 +4924,74 @@
                     },
                     on: {}
                 });
+                new core(".swiper-news", {
+                    modules: [ Navigation, Pagination ],
+                    observer: true,
+                    observeParents: true,
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    autoHeight: true,
+                    speed: 800,
+                    pagination: {
+                        el: ".swiper-pagination-news",
+                        clickable: true,
+                        renderBullet: function(index, className) {
+                            return '<span class =" ' + className + ' " > ' + (index + 1) + "</span>";
+                        }
+                    },
+                    navigation: {
+                        prevEl: ".prev-news",
+                        nextEl: ".next-news"
+                    },
+                    on: {}
+                });
+                new core(".swiper-news-alone", {
+                    modules: [ Navigation, Pagination ],
+                    observer: true,
+                    observeParents: true,
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    autoHeight: true,
+                    speed: 800,
+                    navigation: {
+                        prevEl: ".content-news-prev",
+                        nextEl: ".content-news-next"
+                    },
+                    on: {}
+                });
+                new core(".swiper-news-same", {
+                    modules: [ Navigation, Pagination ],
+                    observer: true,
+                    observeParents: true,
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    autoHeight: true,
+                    speed: 800,
+                    pagination: {
+                        el: ".swiper-media-pagination",
+                        clickable: true
+                    },
+                    navigation: {
+                        prevEl: ".prev-news",
+                        nextEl: ".next-news"
+                    },
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 0,
+                            autoHeight: true
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    },
+                    on: {}
+                });
             }
         }
         window.addEventListener("load", (function(e) {
@@ -5070,6 +5140,24 @@
             let add = card.querySelector(".play-video");
             videoBody.addEventListener("click", (() => {
                 add.classList.toggle("_button-video-active");
+            }));
+        }));
+        document.addEventListener("DOMContentLoaded", (function() {
+            function checkLastBtn() {
+                if (jQuery(".video__tabs-swiper .tabs-video__navigation .tabs-video__title:last-child()").hasClass("_tab-active")) jQuery(".mobile-arrow.arrow-next").addClass("disabled"); else jQuery(".mobile-arrow.arrow-next").removeClass("disabled");
+                if (jQuery(".video__tabs-swiper .tabs-video__navigation .tabs-video__title:first-child()").hasClass("_tab-active")) jQuery(".mobile-arrow.arrow-prev").addClass("disabled"); else jQuery(".mobile-arrow.arrow-prev").removeClass("disabled");
+            }
+            jQuery(".mobile-arrow.arrow-prev").on("click", (function() {
+                var current_tab = jQuery(".video__tabs-swiper .tabs-video__navigation .tabs-video__title._tab-active").index();
+                jQuery(".video__tabs-swiper .tabs-video__navigation .tabs-video__title").length;
+                jQuery(".video__tabs-swiper .tabs-video__navigation .tabs-video__title:nth-child( " + current_tab + " )").click();
+                checkLastBtn();
+            }));
+            jQuery(".mobile-arrow.arrow-next").on("click", (function() {
+                var current_tab = jQuery(".video__tabs-swiper .tabs-video__navigation .tabs-video__title._tab-active").index();
+                current_tab = ++current_tab;
+                jQuery(".video__tabs-swiper .tabs-video__navigation .tabs-video__title:nth-child( " + ++current_tab + " )").click();
+                checkLastBtn();
             }));
         }));
         window["FLS"] = true;
