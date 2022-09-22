@@ -3580,7 +3580,7 @@ button.swiper-pagination-bullet {
 .slash {
   width: 7px;
   height: 5px;
-  background: url("../img/points/slash.svg") center center no-repeat;
+  background: url("../img/points/slash.svg") center center no-repeat !important;
 }
 
 .news-section {
@@ -4331,6 +4331,398 @@ button.swiper-pagination-bullet {
 .card-same {
   -ms-grid-columns: 1fr !important;
   grid-template-columns: 1fr !important;
+}
+
+.contacts {
+  padding-top: 50px;
+  background: url("../img/main/map/bg-img.svg") right top no-repeat;
+}
+
+.contacts__block-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 20px;
+  margin-bottom: 60px;
+  border-bottom: 1px solid rgba(73, 75, 91, 0.1176470588);
+}
+
+.contacts__title {
+  position: relative;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.contacts__title::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  height: 100%;
+  width: 4px;
+  background: #5C6EFF;
+  border-radius: 10px;
+}
+
+.contacts__tel {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  /* or 25px */
+  color: #2E2C2D;
+  padding-left: 28px;
+  background: url("../img/main/map/tel.svg") left center no-repeat;
+  margin-bottom: 30px;
+}
+
+.contacts__block-list {
+  margin-bottom: 30px;
+}
+
+.contacts__block-list-title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 140%;
+  /* identical to box height, or 21px */
+  text-transform: uppercase;
+  color: #2D2B2C;
+  margin-bottom: 10px;
+}
+
+.contacts__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contacts__list :not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts__item {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 140%;
+  /* or 18px */
+  color: #2D2B2C;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
+.contacts__link {
+  border-bottom: 1px solid #2D2B2C;
+}
+
+.contacts__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 11px;
+}
+
+.contacts__block-maps {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.contacts__maps {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.contacts__maps::after {
+  content: "";
+  left: 50%;
+  top: 0;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  position: absolute;
+  width: 2px;
+  height: 46px;
+  background: #5C6EFF;
+  border-radius: 10px;
+}
+
+.contacts__block-map {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 48%;
+          flex: 1 1 48%;
+}
+
+.contacts__map {
+  overflow: hidden;
+  width: 100%;
+  height: 412px;
+  border-radius: 10px;
+}
+
+.contacts__map-text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 140%;
+  /* or 18px */
+  color: #2C2A2B;
+  max-width: 276px;
+  padding-left: 28px;
+  background: url("../img/main/map/map-pin.svg") left top no-repeat;
+  margin-bottom: 30px;
+}
+
+.contacts-link-social {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #5C6EFF;
+}
+
+.link-social-fb {
+  background: url("../img/main/map/Facebook.svg") center center no-repeat;
+}
+
+.link-social-twit {
+  background: url("../img/main/map/Twitter.svg") center center no-repeat;
+}
+
+.link-social-inst {
+  background: url("../img/main/map/Instagram.svg") center center no-repeat;
+}
+
+.link-social-wtss {
+  background: url("../img/main/map/Whatsapp.svg") center center no-repeat;
+}
+
+.map-text-left {
+  margin-left: auto;
+}
+
+.contacts {
+  padding-bottom: 118px;
+}
+
+.us-contact__title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 110%;
+  /* identical to box height, or 40px */
+  text-align: center;
+  color: #302E2F;
+  margin-bottom: 30px;
+}
+
+.us-contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.us-contact__block-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.us-contact__textarea {
+  margin-bottom: 30px;
+}
+
+.input-name {
+  border: 1px solid rgb(232, 232, 232);
+  border-radius: 10px;
+  padding: 17px 30px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 31%;
+          flex: 1 1 31%;
+}
+
+.input-number {
+  border: 1px solid rgb(232, 232, 232);
+  border-radius: 10px;
+  padding: 17px 30px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 31%;
+          flex: 1 1 31%;
+}
+
+.input-email {
+  border: 1px solid rgb(232, 232, 232);
+  border-radius: 10px;
+  padding: 17px 30px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 31%;
+          flex: 1 1 31%;
+}
+
+.us-contact-textarea {
+  border: 1px solid rgb(232, 232, 232);
+  border-radius: 10px;
+  padding: 17px 30px;
+  resize: none;
+  width: 100%;
+  height: 108px;
+}
+
+.button-us-contact {
+  display: block;
+  margin: 0 auto;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 150%;
+  color: #FFFFFF;
+  padding: 13px;
+  width: 266px;
+  border-radius: 10px;
+  background: -o-linear-gradient(310.66deg, #7787FF 0%, #2139FF 85.82%);
+  background: linear-gradient(139.34deg, #7787FF 0%, #2139FF 85.82%);
+}
+
+.career__block-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.title-text-career {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 150%;
+  color: #494B5B;
+  padding-left: 24px;
+  position: relative;
+  margin-left: 20px;
+}
+
+.title-text-career::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 46px;
+  background: #5C6EFF;
+  border-radius: 10px;
+}
+
+.career {
+  padding-top: 50px;
+  padding-bottom: 115px;
+  background: url("../img/main/career/bg-img.svg") right top no-repeat;
+}
+
+.career__cards {
+  margin-top: 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.career__card {
+  padding: 30px 40px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.2))), radial-gradient(111.14% 111.14% at 8.37% 0%, rgba(255, 255, 255, 0.76) 0%, rgba(255, 255, 255, 0.4) 100%);
+  background: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), -o-radial-gradient(8.37% 0%, 111.14% 111.14%, rgba(255, 255, 255, 0.76) 0%, rgba(255, 255, 255, 0.4) 100%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), radial-gradient(111.14% 111.14% at 8.37% 0%, rgba(255, 255, 255, 0.76) 0%, rgba(255, 255, 255, 0.4) 100%);
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
+  border-radius: 9.93464px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.career__card-title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 130%;
+  /* identical to box height, or 31px */
+  text-transform: uppercase;
+  color: #353535;
+  margin-bottom: 10px;
+}
+
+.career__card-price {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  /* identical to box height, or 27px */
+  color: #353535;
+  margin-bottom: 10px;
+}
+
+.career__card-text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 150%;
+  /* or 22px */
+  color: #353535;
+  margin-bottom: 10px;
+}
+
+.career__card-item {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 150%;
+  /* identical to box height, or 22px */
+  color: #353535;
+}
+
+.career__card:hover {
+  background: white;
+  -webkit-box-shadow: 0px 7px 18px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 7px 18px rgba(0, 0, 0, 0.1);
 }
 
 .header {
@@ -5305,6 +5697,62 @@ button.swiper-pagination-bullet {
     gap: 20px;
   }
 
+  .contacts__block-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 50px;
+  }
+
+  .contacts__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 0px 20px;
+  }
+
+  .contacts__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 48%;
+            flex: 1 1 48%;
+  }
+
+  .contacts__maps {
+    gap: 20px;
+  }
+
+  .contacts__map {
+    height: 344px;
+  }
+
+  .contacts {
+    padding-bottom: 104px;
+  }
+
+  .input-name {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    min-width: 100%;
+  }
+
+  .career {
+    padding-bottom: 85px;
+  }
+
+  .career__cards {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .career__card {
+    padding: 30px 30px;
+  }
+
   .menu__band {
     display: block;
     width: 100%;
@@ -5926,6 +6374,79 @@ button.swiper-pagination-bullet {
 
   .block-nav-same {
     margin: 0 auto !important;
+  }
+
+  .contacts__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+
+  .contacts__maps::after {
+    display: none;
+  }
+
+  .contacts__maps {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .contacts__map {
+    height: 320px;
+  }
+
+  .map-text-left {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0px;
+  }
+
+  .us-contact__title {
+    font-size: 26px;
+  }
+
+  .button-us-contact {
+    width: 100%;
+  }
+
+  .career__block-title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .title-text-career {
+    font-size: 13px;
+    margin-top: 20px;
+    padding-top: 24px;
+    margin-left: 0px !important;
+    padding-left: 0px !important;
+  }
+
+  .title-text-career::after {
+    width: 46px;
+    height: 4px;
+  }
+
+  .career__card-title {
+    font-size: 22px;
+  }
+
+  .career__card-price {
+    font-size: 16px;
+  }
+
+  .career__card-text {
+    font-size: 13px;
+  }
+
+  .career__card-item {
+    font-size: 13px;
   }
 
   .social {
