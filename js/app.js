@@ -1099,7 +1099,7 @@
         modules_flsModules.select = new SelectConstructor({});
         var datepicker_min = __webpack_require__(448);
         if ($(".black-data").length > 0 && $(".black-data-two").length > 0) {
-            const picker = datepicker_min(".black-data", {
+            datepicker_min(".black-data", {
                 customDays: [ "SAN", "MON ", "TUE", "WED", "THU", "FRI", "SAT" ],
                 customMonths: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ],
                 overlayButton: "Применить",
@@ -1123,7 +1123,58 @@
                 },
                 onSelect: function(input, instance, date) {}
             });
-            modules_flsModules.datepicker = picker;
+        }
+        if ($(".white-data").length > 0 && $(".white-data-two").length > 0 && $(".white-data-three").length > 0) {
+            datepicker_min(".white-data", {
+                customDays: [ "SAN", "MON ", "TUE", "WED", "THU", "FRI", "SAT" ],
+                customMonths: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ],
+                overlayButton: "Применить",
+                overlayPlaceholder: "Год (4 цифры)",
+                startDay: 1,
+                formatter: (input, date, instance) => {
+                    const value = date.toLocaleDateString();
+                    input.value = value;
+                },
+                onSelect: function(input, instance, date) {}
+            });
+            datepicker_min(".white-data-two", {
+                customDays: [ "SAN", "MON ", "TUE", "WED", "THU", "FRI", "SAT" ],
+                customMonths: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ],
+                overlayButton: "Применить",
+                overlayPlaceholder: "Год (4 цифры)",
+                startDay: 1,
+                formatter: (input, date, instance) => {
+                    const value = date.toLocaleDateString();
+                    input.value = value;
+                },
+                onSelect: function(input, instance, date) {}
+            });
+            datepicker_min(".white-data-three", {
+                customDays: [ "SAN", "MON ", "TUE", "WED", "THU", "FRI", "SAT" ],
+                customMonths: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ],
+                overlayButton: "Применить",
+                overlayPlaceholder: "Год (4 цифры)",
+                startDay: 1,
+                formatter: (input, date, instance) => {
+                    const value = date.toLocaleDateString();
+                    input.value = value;
+                },
+                onSelect: function(input, instance, date) {}
+            });
+        }
+        if ($(".white-data-event").length > 0) {
+            datepicker_min(".white-data-event", {
+                customDays: [ "SAN", "MON ", "TUE", "WED", "THU", "FRI", "SAT" ],
+                customMonths: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ],
+                overlayButton: "Применить",
+                overlayPlaceholder: "Год (4 цифры)",
+                startDay: 1,
+                formatter: (input, date, instance) => {
+                    const value = date.toLocaleDateString();
+                    input.value = value;
+                },
+                onSelect: function(input, instance, date) {}
+            });
         }
         function isObject(obj) {
             return null !== obj && "object" === typeof obj && "constructor" in obj && obj.constructor === Object;
@@ -4987,6 +5038,72 @@
                         },
                         1024: {
                             slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    },
+                    on: {}
+                });
+                new core(".swiper-picket", {
+                    modules: [ Navigation, Pagination ],
+                    observer: true,
+                    observeParents: true,
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    autoHeight: true,
+                    speed: 800,
+                    pagination: {
+                        el: ".swiper-media-pagination",
+                        clickable: true
+                    },
+                    navigation: {
+                        prevEl: ".prev-news",
+                        nextEl: ".next-news"
+                    },
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 0,
+                            autoHeight: true
+                        },
+                        768: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        1024: {
+                            slidesPerView: 1,
+                            spaceBetween: 30
+                        }
+                    },
+                    on: {}
+                });
+                new core(".swiper-partner", {
+                    modules: [ Navigation, Pagination ],
+                    observer: true,
+                    observeParents: true,
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    autoHeight: true,
+                    speed: 800,
+                    pagination: {
+                        el: ".swiper-media-pagination",
+                        clickable: true
+                    },
+                    navigation: {
+                        prevEl: ".prev-news",
+                        nextEl: ".next-news"
+                    },
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 0,
+                            autoHeight: true
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                        1024: {
+                            slidesPerView: 2,
                             spaceBetween: 30
                         }
                     },
