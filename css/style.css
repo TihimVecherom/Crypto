@@ -543,6 +543,9 @@ h6 {
 }
 
 .button {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   padding: 13px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -568,6 +571,11 @@ h6 {
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
+}
+
+.button:hover {
+  background: -o-linear-gradient(310.66deg, #2139FF 0%, #7787FF 100%);
+  background: linear-gradient(139.34deg, #2139FF 0%, #7787FF 100%);
 }
 
 .button span {
@@ -2072,10 +2080,17 @@ h6 {
 }
 
 .card-team__link {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   display: block;
   width: 34px;
   height: 34px;
   border-radius: 10px;
+}
+
+.card-team__link:hover {
+  opacity: 0.6;
 }
 
 .card-team__picture img {
@@ -3132,8 +3147,6 @@ button.swiper-pagination-bullet {
   overflow: hidden;
   background: white;
   background-blend-mode: overlay, normal;
-  -webkit-filter: drop-shadow(2.48366px 19.8693px 23.5948px rgba(0, 0, 0, 0.09));
-          filter: drop-shadow(2.48366px 19.8693px 23.5948px rgba(0, 0, 0, 0.09));
   -webkit-backdrop-filter: blur(49.6732px);
           backdrop-filter: blur(49.6732px);
 }
@@ -3184,8 +3197,6 @@ button.swiper-pagination-bullet {
   background: -o-radial-gradient(15.32% 21.04%, 90.16% 143.01%, rgba(165, 239, 255, 0.2) 0%, rgba(110, 191, 244, 0.0447917) 77.08%, rgba(70, 144, 213, 0) 100%);
   background: radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(165, 239, 255, 0.2) 0%, rgba(110, 191, 244, 0.0447917) 77.08%, rgba(70, 144, 213, 0) 100%);
   background-blend-mode: overlay, normal;
-  -webkit-filter: drop-shadow(2.48366px 19.8693px 23.5948px rgba(0, 0, 0, 0.09));
-          filter: drop-shadow(2.48366px 19.8693px 23.5948px rgba(0, 0, 0, 0.09));
   -webkit-backdrop-filter: blur(49.6732px);
           backdrop-filter: blur(49.6732px);
 }
@@ -3859,7 +3870,7 @@ button.swiper-pagination-bullet {
 .slash {
   min-width: 13px;
   min-height: 7px;
-  background: url("../img/points/slash.svg") center center no-repeat !important;
+  background: url("../img/main/points/slash.svg") center center no-repeat !important;
   background-size: contain;
 }
 
@@ -5204,6 +5215,12 @@ button.swiper-pagination-bullet {
   margin-bottom: 30px;
 }
 
+.data-block-event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .news-slide__event-data {
   font-family: "Gilroy";
   font-style: normal;
@@ -5781,7 +5798,6 @@ button.swiper-pagination-bullet {
 
 .swiper-partner {
   padding-bottom: 40px;
-  margin-bottom: 40px;
 }
 
 .header {
@@ -6002,23 +6018,61 @@ button.swiper-pagination-bullet {
 }
 
 .link-facebook {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   background: url("../img/header/Facebook.svg") center center no-repeat;
   background-size: 6.5px 12px;
 }
 
+.link-facebook:hover {
+  background: white url("../img/header/Facebook-h.svg") center center no-repeat;
+  background-size: 6.5px 12px;
+}
+
 .link-twiter {
-  background: url("../img/header/Twitter.svg") center center no-repeat;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  background: url("../img/header/Twitter.svg") 6px center no-repeat;
+  background-size: 11px 9px;
+}
+
+.link-twiter:hover {
+  background: white url("../img/header/Twitter-h.svg") 6px center no-repeat;
   background-size: 11px 9px;
 }
 
 .link-instagram {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   background: url("../img/header/Instagram.svg") center center no-repeat;
-  background-size: 10px 10px;
+  background-size: 11px 11px;
+}
+
+.link-instagram:hover {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  background: white url("../img/header/Instagram-h.svg") center center no-repeat;
+  background-size: 12px 12px;
 }
 
 .link-whatsapp {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   background: url("../img/header/Whatsapp.svg") center center no-repeat;
-  background-size: 11.5px 11px;
+  background-size: 12px 12px;
+}
+
+.link-whatsapp:hover {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  background: white url("../img/header/Whatsapp-h.svg") center center no-repeat;
+  background-size: 12px 12px;
 }
 
 .footer {
@@ -6251,19 +6305,64 @@ button.swiper-pagination-bullet {
 }
 
 .link-footer-fb {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   background: url("../img/footer/Facebook.svg") center center no-repeat;
+  background-size: 7px 12px;
+}
+
+.link-footer-fb:hover {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  background: white url("../img/footer/Facebook-h.svg") center center no-repeat;
+  background-size: 7px 12px;
+  opacity: 1;
 }
 
 .link-footer-tw {
-  background: url("../img/footer/Twitter.svg") 6px center no-repeat;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  background: url("../img/footer/Twitter.svg") center center no-repeat;
+  background-size: 11px 9px;
+}
+
+.link-footer-tw:hover {
+  background: white url("../img/footer/Twitter-h.svg") center center no-repeat;
+  opacity: 1;
 }
 
 .link-footer-telegram {
-  background: url("../img/footer/Instagram.svg") 7px center no-repeat;
+  background: url("../img/footer/Instagram.svg") center center no-repeat;
+  background-size: 12px 12px;
+}
+
+.link-footer-telegram:hover {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  background: white url("../img/footer/Instagram-h.svg") center center no-repeat;
+  background-size: 12px 12px;
+  opacity: 1;
 }
 
 .link-footer-whats {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   background: url("../img/footer/Whatsapp.svg") center center no-repeat;
+  background-size: 11px 11px;
+}
+
+.link-footer-whats:hover {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  background: white url("../img/footer/Whatsapp-h.svg") center center no-repeat;
+  background-size: 11px 11px;
+  opacity: 1;
 }
 
 .footer__block {
@@ -7669,6 +7768,17 @@ button.swiper-pagination-bullet {
     font-size: 13px;
   }
 
+  .data-block-event {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
   .news-slide__event-data {
     font-size: 13px;
   }
@@ -7742,6 +7852,10 @@ button.swiper-pagination-bullet {
 
   .partner__text-title {
     font-size: 22px;
+  }
+
+  .non-border-mobile {
+    border-bottom: 1px solid rgba(255, 255, 255, 0) !important;
   }
 
   .social {
