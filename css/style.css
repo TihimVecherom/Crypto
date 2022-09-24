@@ -3868,10 +3868,10 @@ button.swiper-pagination-bullet {
 }
 
 .slash {
+  display: block !important;
   min-width: 13px !important;
   min-height: 7px !important;
-  background: red url("../img/main/points/slash.svg") center center no-repeat !important;
-  background-size: contain !important;
+  background: url("../img/main/points/slash.svg") center center no-repeat !important;
 }
 
 .news-section {
