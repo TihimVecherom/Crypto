@@ -5029,7 +5029,7 @@
                     breakpoints: {
                         320: {
                             slidesPerView: 1,
-                            spaceBetween: 0,
+                            spaceBetween: 20,
                             autoHeight: true
                         },
                         768: {
@@ -5062,7 +5062,7 @@
                     breakpoints: {
                         320: {
                             slidesPerView: 1,
-                            spaceBetween: 0,
+                            spaceBetween: 20,
                             autoHeight: true
                         },
                         768: {
@@ -5095,7 +5095,7 @@
                     breakpoints: {
                         320: {
                             slidesPerView: 1,
-                            spaceBetween: 0,
+                            spaceBetween: 20,
                             autoHeight: true
                         },
                         768: {
